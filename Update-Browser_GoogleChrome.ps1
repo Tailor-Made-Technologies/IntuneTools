@@ -170,6 +170,7 @@ if (Get-Process chrome -ErrorAction SilentlyContinue) {
 # Cleanup
 #-----------------------------------------------------------
 
+# Remove the installer file after installation
 if (Test-Path $installerPath) {
     Remove-Item $installerPath -Force -ErrorAction SilentlyContinue
     Write-LogEntry -Value "Installer file removed from $installerPath"
